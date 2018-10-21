@@ -1,5 +1,5 @@
 import machine
-from libs.ssd1306 import SSD1306_I2C
+from ssd1306 import SSD1306_I2C
 
 class Pantalla:
     def __init__(self, pin1=5, pin2=4):
