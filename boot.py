@@ -8,12 +8,13 @@ from wifi import Wifi
 
 webrepl.start()
 gc.collect()
+
+# connect to wifi
 wlan = Wifi()
+wlan.conecta("Vomistar_FB30")
 
 # starting display
 dis = Pantalla()
 
-# connect to wifi
-wlan.conecta("Vomistar_FB30")
 #ip = wlan.ifconfig('ip')
 #dis.texto(f"IP: {ip}")
