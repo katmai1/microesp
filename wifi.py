@@ -13,17 +13,12 @@ class Wifi:
             self.wan.connect(essid, self.redes[essid])
             while not self.is_connected():
                 pass
-        print('network config:', self.wan.ifconfig())
 
     @property
     def is_connected(self):
         return self.wan.isconnected()
-    
-    def ifconfig(self, filtro='all'):
-        datos = self.wan.ifconfig()
-        if filtro == 'all':
-            return datos
-        elif filtro == 'ip':
-            return datos[0]
-        return f"el filtro '{filtro}' no es valido"
+
+    @property
+    def ip(self):
+        return self.wan.ifconfig()[0]
 
