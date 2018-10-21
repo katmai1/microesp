@@ -15,7 +15,8 @@ wlan = Wifi()
 dis = Pantalla()
 
 # connect to wifi
-wlan.conecta("Vomistar_FB30")
+essid = "Vomistar_FB30"
+wlan.conecta(essid)
 
-dis.texto("IP: ")
-dis.texto("GTW: ")
+dis.texto("joaaaan!")
+dis.texto(wlan.ip)

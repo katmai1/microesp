@@ -1,4 +1,5 @@
 import machine
+from time import sleep
 from ssd1306 import SSD1306_I2C
 
 class Pantalla:
@@ -14,6 +15,7 @@ class Pantalla:
         self.pos = 0
     
     def texto(self, texto):
-        self.oled.text(texto, 0, self.pos)
+        inicio = 0
+        self.oled.text(texto, inicio, self.pos)
         self.oled.show()
         self.pos += 10
